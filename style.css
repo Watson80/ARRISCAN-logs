@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Klavika', sans-serif;
+}
+
+.selected {
+    background-color: #add8e6; /* Pastel Mid-Blue */
+}
+
+#logInfo {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#logInfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+#logInfo li {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #3BACFF; /* Light pastel blue */
+    border: none;
+    color: #fff; /* White text color */
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0093FF; /* Darker pastel blue on hover */
+}

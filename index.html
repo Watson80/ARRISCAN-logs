@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Analyzer</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file --> 
+    <script src="script.js" defer></script>
+    <script src="logOrder.js" defer></script> <!-- Link to the log order JavaScript file -->
+    <script src="plotSpeed.js" defer></script>
+</head>
+<body>
+
+  <button onclick="chooseMultipleFiles()">Choose log file/s</button>
+  <br>
+    
+  <div id="fileMessage" style="color: green;"></div>
+  
+    <input type="file" id="fileInput" onchange="displayLogInfo()" style="display: none;" multiple>
+    <br>
+    
+    <div id="logInfo">
+        <h3>Log Information:</h3>
+        <ul>
+            <li id="startOfLogs">Start of log(s):</li>
+            <li id="endOfLogs">End of log(s):</li>
+            <li id="pmacVersion">PMAC version:</li>
+            <li id="swVersion">SW version:</li>
+            <li id="kcrTrack">KCR track:</li>
+        </ul>
+  </div>
+    
+  <h3>Filter logs:</h3> 
+  <button onclick="filterLogsByScanSpeed()">Scan Speed</button>
+  <button onclick="plotGraphForScanSpeed()">Scan speed (PLOT)</button>
+  <button onclick="filterLogsByScanLocation()">Scan Location</button>
+  <button onclick="filterLogsByResolution()">Resolution</button>
+  <br>
+  <label for="keywordInput">Custom keyword:</label>
+  <input type="text" id="keywordInput" placeholder="Enter keyword">
+  <button onclick="filterLogs()">Filter</button>
+    <br>
+  <button onclick="downloadFilteredLogs()">Download Filtered Logs</button>
+
+  <canvas id="scanSpeedChart" width="800" height="400"></canvas>
+
+</body>
+</html>
